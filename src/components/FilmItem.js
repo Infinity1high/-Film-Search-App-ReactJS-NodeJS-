@@ -16,7 +16,8 @@ const FilmItem = (props) => (
 
 
     </div>
-);
+    )
+
 // FavoritePic.propTypes = {
 //     imageUrl: PropTypes.string.isRequired
 // };

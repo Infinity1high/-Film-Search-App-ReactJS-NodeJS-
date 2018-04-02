@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+ .navigation {
+   float: left;
+   background-color: black;
+   width: 20%;
+   height: 100%;
+   position: fixed;
+   padding: 100px 30px 0 30px; ;
+ }
+ .search {
+   margin: 10px 0 0 0;
+ }
+.navbar-item {
+    margin-top: 20px;
+  width: 100%;
+ }
+.film-list{
+  float: right;
+  width: 80%;
+  padding: 50px 20px 50px 20px;
+}
+.film-item {
+  background-color: darkgray;
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px  0 20px 0;
+}
+h1 {
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.modal {
+    font-size: 12px;
+}
+.modal > .header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+.modal > .content {
+    width: 100%;
+    padding: 10px 5px;
+}
+.modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+.modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}

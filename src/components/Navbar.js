@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
-
-
+import Popup from "reactjs-popup";
+import Modal from './Modal';
 
 
 class Navbar extends Component {
-
+    submit = values => {
+        // print the form values to the console
+        console.log(values)
+    }
 
     render() {
 
@@ -26,25 +29,11 @@ class Navbar extends Component {
                              aria-label="Search"
                              onChange={(e) => {this.props.searchTextChangedAuthorAction(e.target.value);}}
                       />
-                        <button type="button" className="btn btn-secondary navbar-item">Add new film</button>
+                        <button type="button" className="btn btn-secondary navbar-item" >Add new film</button>
                         <button type="button" className="btn btn-secondary navbar-item">Add collection</button>
                     </div>
 
-                    {/*<ul className='navbar-nav '>*/}
-                        {/*<li>*/}
-                            {/*<div className='input-group mb-3 search' id="search">*/}
-                                {/*<input*/}
-                                    {/*// onChange={(e) => {*/}
-                                    {/*//     console.log(e);*/}
-                                    {/*//     this.props.searchTextChangedAction(e.target.value);*/}
-                                    {/*//     this.props.loadPhotosAction(e.target.value);*/}
-                                    {/*// }}*/}
-                                {/*/>*/}
-
-                            {/*</div>*/}
-                        {/*</li>*/}
-
-                    {/*</ul>*/}
+                <Modal submit={this.submit}/>
             </div>
 
 
