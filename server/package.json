@@ -2,6 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "API for FILM app",
+  "engines": {
+    "node": "8.9.4"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,8 +18,5 @@
     "mongoose": "^5.0.12",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.3"
-  },
-  "engines": {
-    "node": "8.9.4"
   }
 }
