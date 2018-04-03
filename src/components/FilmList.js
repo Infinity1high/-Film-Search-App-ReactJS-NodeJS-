@@ -7,9 +7,9 @@ import FilmItem from './FilmItem';
 class FilmList extends Component  {
     componentWillMount() {
         this.props.loadFilmsAction();
-        if (this.props.filmsFilteredByTitle.length === 0) {
-            this.props.updateFilterArray();
-        }
+        // if (this.props.filmsFilteredByTitle.length === 0) {
+        //     this.props.updateFilterArray();
+        // }
     }
 
     renderFilms = () => (
@@ -25,7 +25,6 @@ class FilmList extends Component  {
 ))
     )
     render () {
-
         return (
             <div className='film-list '>
                 {this.renderFilms()}

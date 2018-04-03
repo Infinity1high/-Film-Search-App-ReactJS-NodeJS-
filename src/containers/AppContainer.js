@@ -5,7 +5,7 @@ import App from "../App";
 import {connect} from "react-redux";
 
 const mapStateToProps = (store) => ({
-    ...store.search
+    ...store.searchReducer
 });
 
 const mapDispatchToProps = {

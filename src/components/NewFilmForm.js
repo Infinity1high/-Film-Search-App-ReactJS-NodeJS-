@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router';
 
 let NewFilmForm = props => {
     const { handleSubmit } = props;
@@ -21,14 +22,15 @@ let NewFilmForm = props => {
                 <label htmlFor="stars">Stars</label>
                 <Field name="format" component="input" type="email" />
             </div>
-            <button type="submit" className='btn btn-secondary'>Save</button>
+            <button  type="submit" className='btn btn-secondary'>Save</button>
         </form>
     )
 }
 
 NewFilmForm = reduxForm({
     // a unique name for the form
-    form: 'newFilm'
+    form: 'newFilm',
+    // fileds: ['title', 'release', 'format','stars']
 })(NewFilmForm);
 
 export default NewFilmForm;

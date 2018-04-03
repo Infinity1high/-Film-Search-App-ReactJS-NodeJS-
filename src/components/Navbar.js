@@ -29,7 +29,8 @@ class Navbar extends Component {
                              aria-label="Search"
                              onChange={(e) => {this.props.searchTextChangedAuthorAction(e.target.value);}}
                       />
-                        <button type="button" className="btn btn-secondary navbar-item" >Add new film</button>
+                        <input type='file'/>
+
                         <button type="button" className="btn btn-secondary navbar-item">Add collection</button>
                     </div>
 

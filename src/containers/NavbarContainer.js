@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import {connect} from "react-redux";
 
 const mapStateToProps = (store) => ({
-    ...store.search
+    ...store.searchReducer
 });
 
 const mapDispatchToProps = {

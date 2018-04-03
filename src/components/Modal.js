@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NewFilmForm from './NewFilmForm';
 import Popup from "reactjs-popup";
+import {Link} from 'react-router';
 
 const contentStyle = {
     maxWidth: "600px",

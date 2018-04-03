@@ -85,7 +85,7 @@ export function loadFilmsAction() {
             .then((response) => {
                 console.log(response);
                 const {data} = response;
-                console.log(data);
+                console.log(response);
                 dispatch({
                     type: ACTION_FILMS_LOAD_SUCCESS,
                     payload: {films: data},

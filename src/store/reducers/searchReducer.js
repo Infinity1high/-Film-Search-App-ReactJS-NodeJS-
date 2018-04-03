@@ -8,7 +8,8 @@ const initState = {
     loader: false,
     films: [],
     filmsFilteredByTitle:  [ ],
-    filmsFilteredByActor: []
+    filmsFilteredByActor: [],
+    newFilm: {}
 
 };
 
