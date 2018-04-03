@@ -4,9 +4,6 @@ const SERVER_URL = 'https://limitless-savannah-65896.herokuapp.com/';
 
 export const ACTION_SEARCH_TEXT_CHANGED = 'ACTION_SEARCH_TEXT_CHANGED';
 export const ACTION_SEARCH_TEXT_CHANGED_ACTOR = 'ACTION_SEARCH_TEXT_CHANGED_ACTOR';
-export const ACTION_FILMS_LOAD_REQUEST = 'ACTION_FILMS_LOAD_REQUEST';
-export const ACTION_FILMS_LOAD_SUCCESS = 'ACTION_FILMS_LOAD_SUCCESS';
-export const ACTION_FILMS_LOAD_FAILURE = 'ACTION_FILMS_LOAD_FAILURE';
 export const ACTION_REMOVE_FILM  = 'ACTION_REMOVE_FILM';
 export const ACTION_FILMS_LOAD_REQUEST = 'ACTION_FILMS_LOAD_REQUEST';
 export const ACTION_FILMS_LOAD_SUCCESS = 'ACTION_FILMS_LOAD_SUCCESS';
@@ -78,21 +75,22 @@ export  function filterFilmsByActor(searchText) {
 
 
 
-//
-// export function loadFilmsAction(searchText) {
-//     console.log(searchText);
-//     return (dispatch) => {
-//         dispatch({type: ACTION_FILMS_LOAD_REQUEST});
-//
-//         axios.get(SERVER_URL)
-//             .then((response) => {
-//                 const {data: {films: {film}}} = response;
-//                 console.log(response);
-//                 dispatch({
-//                     type: ACTION_FILMS_LOAD_SUCCESS,
-//                     payload: {films: film},
-//                 });
-//             })
-//             .catch((err) => dispatch({type: ACTION_FILMS_LOAD_FAILURE, payload: {err}}))
-//     };
-// }
+
+
+export function loadFilmsAction() {
+    return (dispatch) => {
+        dispatch({type: ACTION_FILMS_LOAD_REQUEST});
+
+        axios.get(SERVER_URL)
+            .then((response) => {
+                console.log(response);
+                const {data} = response;
+                console.log(data);
+                dispatch({
+                    type: ACTION_FILMS_LOAD_SUCCESS,
+                    payload: {films: data},
+                });
+            })
+            .catch((err) => dispatch({type: ACTION_FILMS_LOAD_FAILURE, payload: {err}}))
+    };
+}

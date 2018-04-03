@@ -8,7 +8,8 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = {
-    updateFilterArray: Actions.updateFilterArray
+    updateFilterArray: Actions.updateFilterArray,
+    loadFilmsAction: Actions.loadFilmsAction
 
 };
 

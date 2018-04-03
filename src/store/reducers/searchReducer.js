@@ -6,18 +6,7 @@ const initState = {
     content: '',
     content_actor: '',
     loader: false,
-    films: [{
-        title: 'King Artur',
-        release: '1991',
-        format: 'Blueray',
-        stars: ['Alan fame', 'rob jake']
-    },
-        {
-            title: 'Red Sparrow',
-            release: '1991',
-            format: 'Blueray',
-            stars: ['Alan fame', 'rob jake']
-        }],
+    films: [],
     filmsFilteredByTitle:  [ ],
     filmsFilteredByActor: []
 
@@ -40,15 +29,17 @@ export default  (state = initState, action) => {
 
 
             }
-        case  Actions.ACTION_SEARCH_FILMS_LOAD_REQUEST:
+        case  Actions.ACTION_FILMS_LOAD_REQUEST:
             return {
                 ...state,
                 loader: true,
             }
-        case  Actions.ACTION_SEARCH_FILMS_LOAD_SUCCESS:
+        case  Actions.ACTION_FILMS_LOAD_SUCCESS:
             return {
                 ...state,
                 ...action.payload,
+                films: action.payload.films,
+                filmsFilteredByTitle: action.payload.films,
                 loader: false
 
             };

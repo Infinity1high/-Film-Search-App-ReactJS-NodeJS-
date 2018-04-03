@@ -7,7 +7,10 @@ import FilmListContainer from './containers/FilmListContainer';
 
 class App extends Component {
 
-
+componentWillMount() {
+    this.props.loadFilmsAction();
+    console.log(this.props);
+}
 
   render() {
     return (

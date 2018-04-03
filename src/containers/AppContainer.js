@@ -11,6 +11,7 @@ const mapStateToProps = (store) => ({
 const mapDispatchToProps = {
     searchTextChangedAction:  Actions.searchTextChangedAction,
     filterFilmsByTitle: Actions.filterFilmsByTitle,
+    loadFilmsAction: Actions.loadFilmsAction
 
     // loadFilmsActionAction:  Actions.loadFilmsAction,
 
